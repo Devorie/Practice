@@ -1,0 +1,36 @@
+﻿@model BlogViewModel
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-8">
+
+            <h1 class="my-4">
+                LIT Blog
+                <small>Nothing to see here...</small>
+            </h1>
+            @foreach(Post p in Model.Posts)
+            {
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            <a style="text-decoration:none;" href="/home/viewblogpost?id=@p.Id">@p.Title</a>
+                        </h2>
+                        <p class="card-text">@p.Content</p>
+                        <a href="/home/viewblogpost?id=@p.Id" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on @p.DateTime.ToLongDateString()
+                    </div>
+                </div>
+             }
+           @*  <!-- Pagination -->
+            <ul class="pagination justify-content-center mb-4">
+                    <li class="page-item">
+                        <a class="page-link" href="/home/index?page=2">&larr; Older</a>
+                    </li>
+            </ul> *@
+
+        </div>
+    </div>
+</div>

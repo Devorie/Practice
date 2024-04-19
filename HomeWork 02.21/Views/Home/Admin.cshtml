@@ -1,0 +1,19 @@
+﻿<div class="container mt-5">
+    <div class="row">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+            <form method="post" action="/home/addpost">
+                <input type="text" class="form-control" placeholder="Title" name="title" id="title" />
+                <br />
+                <textarea name="content" class="form-control" placeholder="What's on your mind?" rows="20" id="content"></textarea>
+                <br />
+                <div class="d-grid gap-2 mt-3">
+                    <button disabled class="btn btn-success" id="submit-button">Submit Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="/js/SubmitPost.js"></script>
+}
