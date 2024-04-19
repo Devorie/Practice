@@ -6,6 +6,8 @@ using System.Diagnostics;
 
 namespace HomeWork_02._21.Controllers
 {
+    //hi
+
     public class HomeController : Controller
     {
         private string _connectionString = @"Data Source=.\sqlexpress;Initial Catalog=BlogPost; Integrated Security=true;";
